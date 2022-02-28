@@ -24,8 +24,8 @@ resource "aws_ecs_task_definition" "my_first_task" {
       essential = true
       portMappings = [
         {
-          containerPort = 3000
-          hostPort      = 3000
+          containerPort = 5000
+          hostPort      = 5000
         }
       ]
     }
@@ -48,12 +48,13 @@ resource "aws_ecs_service" "my_first_service" {
   load_balancer {
     target_group_arn = aws_lb_target_group.target_group.arn
     container_name   = aws_ecs_task_definition.my_first_task.family
-    container_port   = 3000
+    container_port   = 5000
   }
 
   network_configuration {
     subnets          = [aws_default_subnet.default_a.id, aws_default_subnet.default_b.id, aws_default_subnet.default_c.id]
     assign_public_ip = true
+    security_groups  = [aws_security_group.service_security_group.id]
   }
 
 }
