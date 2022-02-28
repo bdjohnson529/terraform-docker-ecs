@@ -9,7 +9,7 @@ resource "aws_ecr_repository" "my_first_ecr_repo" {
 ### ECS
 
 resource "aws_ecs_cluster" "my_cluster" {
-  name = "my-cluster" # Naming the cluster
+  name = "my-cluster"
 }
 
 
