@@ -1,6 +1,6 @@
-# Terraform : Docker on AWS
+# Terraform : Docker on ECS
 
-This repo demonstrates how to deploy a Docker image on AWS via Terraform. Make sure you have both [Terraform](https://www.terraform.io/) and the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) installed.
+This repo demonstrates how to deploy a Docker image on AWS ECS via Terraform. Make sure you have both [Terraform](https://www.terraform.io/) and the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) installed.
 
 The infrastructure defined in this repo uses the [Elastic Container Service](https://aws.amazon.com/ecs/) to deploy Docker containers on [Fargate](https://aws.amazon.com/fargate/). ECS can also be configured to deploy the containers on EC2. Reference the [ECS application architecture](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/application_architecture.html) to understand the tradeoffs between Fargate / EC2.
 
